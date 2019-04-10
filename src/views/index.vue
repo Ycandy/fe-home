@@ -1,7 +1,6 @@
 <template lang="pug">
 .index
-  .content(:style='contentStyle')
-    router-view(:viewStyle='viewStyle')
+  router-view
 </template>
 
 <script>
@@ -10,10 +9,7 @@ import config from '~/config'
 export default {
   data () {
     return {
-      config,
-      model: 'home',
-      contentStyle: {},
-      viewStyle: {}
+      config
     }
   },
   methods: {
@@ -36,10 +32,6 @@ export default {
   position relative
   width 100%
   height 100%
-  .content
-    position absolute
-    left 48px
-    width calc(100% - 48px)
-    min-width 650px
-    background #eff5f8
+  display flex
+  flex-flow column nowrap
 </style>
