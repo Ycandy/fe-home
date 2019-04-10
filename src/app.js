@@ -5,7 +5,6 @@ import { createRouter } from './router'
 import { sync } from 'vuex-router-sync'
 import { Input, Button, Select, OptionGroup, Option, RadioGroup, Radio, Loading, Message, Cascader, DatePicker } from 'element-ui'
 import axios from 'axios'
-// import './mock'
 
 const store = createStore()
 
@@ -26,7 +25,6 @@ router.beforeResolve((to, from, next) => {
 
 Vue.prototype.$loading = Loading.service
 Vue.prototype.$message = Message
-// Vue.prototype.$ELEMENT = { size: 'medium' }
 Vue.use(Input)
 Vue.use(Button)
 Vue.use(Select)

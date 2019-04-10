@@ -23,15 +23,6 @@ export default {
   watch: {
     '$route': {
       handler: function (to, from) {
-        // if (to.name.indexOf('datasource') >= 0) {
-        //   this.model = 'datasource'
-        // } else if (to.name.indexOf('relation') >= 0) {
-        //   this.model = 'relation'
-        // } else if (to.name.indexOf('dashboard') >= 0) {
-        //   this.model = 'dashboard'
-        // } else {
-        //   this.model = 'home'
-        // }
       },
       immediate: true,
       deep: true
