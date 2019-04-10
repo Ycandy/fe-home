@@ -1,12 +1,17 @@
 <template lang="pug">
 .index
   router-view
+  Footer
 </template>
 
 <script>
 import config from '~/config'
+import Footer from './home/Footer'
 
 export default {
+  components: {
+    Footer
+  },
   data () {
     return {
       config
