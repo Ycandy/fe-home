@@ -11,25 +11,23 @@ export function createRouter (store) {
     base: `${prefix}/`,
     scrollBehavior: () => ({ y: 0 }),
     routes: [{
-      name: 'login',
-      path: '/login',
-      component: r => require.ensure([], () => r(require('src/views/Login.vue')), 'login')
-    }, {
-      name: 'complete',
-      path: '/complete',
-      component: r => require.ensure([], () => r(require('src/views/Complete.vue')), 'complete')
-    }, {
-      name: 'info',
-      path: '/info',
-      component: r => require.ensure([], () => r(require('src/views/Info.vue')), 'info')
-    }, {
-      name: 'sign',
-      path: '/sign',
-      component: r => require.ensure([], () => r(require('src/views/Sign.vue')), 'sign')
-    }, {
-      name: 'reset',
-      path: '/reset',
-      component: r => require.ensure([], () => r(require('src/views/Reset.vue')), 'reset')
+      name: 'index',
+      path: '/',
+      component: r => require.ensure([], () => r(require('src/views/index.vue')), 'index'),
+      redirect: { name: 'home' },
+      children: [{
+        path: '/',
+        name: 'home',
+        component: r => require.ensure([], () => r(require('src/views/home/home.vue')), 'home')
+      }, {
+        path: '/passage',
+        name: 'passage',
+        component: r => require.ensure([], () => r(require('src/views/home/passage.vue')), 'passage')
+      }, {
+        path: '/load',
+        name: 'load',
+        component: r => require.ensure([], () => r(require('src/views/home/load.vue')), 'load')
+      }]
     }]
   })
   router.beforeEach((to, from, next) => {
