@@ -33,6 +33,7 @@ export default {
 
 <style lang="stylus" scoped>
 .bottom
+  width: 100%;
   height: 65px;
   background-color: #f7f8fc;
   display: flex;
