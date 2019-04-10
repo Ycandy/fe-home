@@ -31,7 +31,7 @@ export default {
 .index
   position relative
   width 100%
-  height 100%
   display flex
   flex-flow column nowrap
+  background #ffffff
 </style>
