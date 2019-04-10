@@ -1,18 +1,8 @@
 module.exports = {
-  key: 'gateway',
-  title: 'gateway-Gapper业务集成',
+  key: 'bnu',
+  title: '北京师范大学',
   route: {
-    prefix: '/gapper',
+    prefix: '/bnu',
     port: 8001,
-  },
-  app: {
-    login: 'http://demo.gapper.in/gateway/auth',
-    getParams: 'http://demo.gapper.in/gateway/user/field',
-    sign: 'http://demo.gapper.in/gateway/user/regist',
-    info: 'http://demo.gapper.in/gateway/user/info',
-    complete: 'http://demo.gapper.in/gateway/user/improve-info',
-    redirect: 'http://demo.gapper.in/gateway/judge-login',
-    getOrganization: 'http://demo.gapper.in/gateway/group/list',
-    getUserTypes: 'http://demo.gapper.in/gateway/api'
   }
 }
