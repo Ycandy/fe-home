@@ -1,8 +1,9 @@
 <template lang="pug">
   .container
-    .top
-      img.image(src="../../../public/img/logo.png")
-      .entrance 管理方入口
+    Top(:viewStyle="viewStyle")
+    // .top
+    //   img.image(src="../../../public/img/logo.png")
+    //   .entrance 管理方入口
     .banner
       .notice-container
         .notice
@@ -59,10 +60,12 @@
 </template>
 
 <script>
+import Top from './Top.vue'
 import Footer from './Footer.vue'
 
 export default {
   components: {
+    Top,
     Footer
   },
   data () {
@@ -106,29 +109,6 @@ export default {
   display flex
   flex-flow column nowrap
   align-items center
-.top
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1200px;
-  min-width: 1100px;
-  height: 100px;
-  align-items: center;
-.entrance
-  font-size: 14px;
-  color: #ffffff;
-  width: 100px;
-  height: 32px;
-  line-height: 32px;
-  background-color: #e27471;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
-  box-sizing: border-box;
-  cursor: pointer;
-.image
-  width: 500px;
-  height: 58px;
 .banner
   display: flex;
   flex-direction: row;
