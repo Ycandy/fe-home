@@ -19,6 +19,9 @@
     li:last-child
       margin-right: 18px
   .el-pagination__total
-    margin-left: 38px
-.el-pagination button:hover i
-  color: red
+    margin-left 38px
+  // 目前是i变色 错误，应该改为 button下的color属性
+  button:hover i
+    color: red
+  button:disabled i
+    color: #C0C4CC
