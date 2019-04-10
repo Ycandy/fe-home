@@ -9,14 +9,13 @@
           .article {{ item.title }}
           .download
           .time {{ item.time }}
-    .page-line
-      el-pagination(
-        @size-change='handleSizeChange'
-        @current-change='handleCurrentChange'
-        :current-page.sync='currentPage'
-        :page-size='pageSize'
-        layout='prev, pager, next, total'
-        :total='pageTotal')
+    el-pagination(
+      @size-change='handleSizeChange'
+      @current-change='handleCurrentChange'
+      :current-page.sync='currentPage'
+      :page-size='pageSize'
+      layout='prev, pager, next, total'
+      :total='pageTotal')
 </template>
 
 <script>
