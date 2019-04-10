@@ -11,10 +11,22 @@
           .time {{ item.time }}
         .detail {{ item.detail }}
     .page
+      el-pagination(
+        @size-change='handleSizeChange'
+        @current-change='handleCurrentChange'
+        :current-page.sync='currentPage'
+        :page-size='pageSize'
+        layout='prev, pager, next, total'
+        :total='pageTotal')
 </template>
 
 <script>
+import { Pagination } from 'element-ui'
+
 export default {
+  components: {
+    [Pagination.name]: Pagination
+  },
   data () {
     return {
       data: [{ title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
@@ -22,8 +34,15 @@ export default {
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
-        { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' }]
+        { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' }],
+      currentPage: 1,
+      pageSize: 10,
+      pageTotal: 100
     }
+  },
+  methods: {
+    handleSizeChange () {},
+    handleCurrentChange () {}
   }
 }
 </script>
@@ -86,4 +105,22 @@ export default {
     overflow hidden
     white-space nowrap
     text-overflow ellipsis
+.page >>>
+  .el-pagination
+    button
+      margin 0 18px
+    .el-pager
+      li
+        min-width 28px
+        width 28px
+        height 28px
+        line-height 28px
+        font-weight normal
+        padding 0
+      li.active
+        color #ffffff
+        background-color #5db8f1
+        border-radius 14px
+      li+li
+        margin 0 18px
 </style>
