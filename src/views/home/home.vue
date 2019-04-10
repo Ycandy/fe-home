@@ -1,9 +1,6 @@
 <template lang="pug">
   .container
-    Top(:viewStyle="viewStyle")
-    // .top
-    //   img.image(src="../../../public/img/logo.png")
-    //   .entrance 管理方入口
+    Top(:viewStyle='viewStyle')
     .banner
       .notice-container
         .notice
@@ -31,45 +28,46 @@
           img(src="../../../public/img/云商城.png")
         .active
           img(src="../../../public/img/云商城s.png")
-          span 云商城
+        span 云商城
       .caption
         .normal
           img(src="../../../public/img/安全考试.png")
         .active
           img(src="../../../public/img/安全考试s.png")
-          span 安全考试
+        span 安全考试
       .caption
         .normal
           img(src="../../../public/img/气体检测.png")
         .active
           img(src="../../../public/img/气体检测s.png")
-          span 气体检测
+        span 气体检测
       .caption
         .normal
           img(src="../../../public/img/管理方.png")
         .active
           img(src="../../../public/img/管理方s.png")
-          span 管理方
+        span 管理方
       .caption
         .normal
           img(src="../../../public/img/安全巡查.png")
         .active
           img(src="../../../public/img/安全巡查s.png")
-          span 安全巡查
-    Footer
+        span 安全巡查
 </template>
 
 <script>
 import Top from './Top.vue'
-import Footer from './Footer.vue'
 
 export default {
   components: {
-    Top,
-    Footer
+    Top
   },
   data () {
     return {
+      viewStyle: {
+        backgroundColor: '#e27471',
+        color: '#ffffff'
+      }
     }
   },
   computed: {
@@ -78,7 +76,7 @@ export default {
         { name: '北京师范大学管理部门举办安全教育活动1', date: '01/1' },
         { name: '北京师范大学管理部门举办安全教育活动2', date: '01/2' },
         { name: '北京师范大学管理部门举办安全教育活动3', date: '01/3' },
-        { name: '北京师范大学管理部门举办安全教育活动3', date: '01/4' },
+        // { name: '北京师范大学管理部门举办安全教育活动3', date: '01/4' },
         { name: '北京师范大学管理部门举办安全教育活动3', date: '01/5' }
       ]
       return data
@@ -88,7 +86,7 @@ export default {
         { name: '北京师范大学管理部门举办安全教育活动1', date: '02/1' },
         { name: '北京师范大学管理部门举办安全教育活动2', date: '02/2' },
         { name: '北京师范大学管理部门举办安全教育活动3', date: '02/3' },
-        { name: '北京师范大学管理部门举办安全教育活动3', date: '02/4' },
+        // { name: '北京师范大学管理部门举办安全教育活动3', date: '02/4' },
         { name: '北京师范大学管理部门举办安全教育活动3', date: '02/5' }
       ]
       return downloads
