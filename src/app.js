@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import { createStore } from './store'
 import { createRouter } from './router'
+import configurationData from './common/common'
 import { sync } from 'vuex-router-sync'
 import { Input, Button, Select, OptionGroup, Option, RadioGroup, Radio, Loading, Message, Cascader, DatePicker } from 'element-ui'
 import axios from 'axios'
@@ -34,6 +35,7 @@ Vue.use(RadioGroup)
 Vue.use(Radio)
 Vue.use(Cascader)
 Vue.use(DatePicker)
+Vue.prototype.global = configurationData
 
 axios.defaults.timeout = 5000
 axios.defaults.withCredentials = true
