@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
-    .banner
-      img()
+    .banner(style='height: 130px')
+      img.background(src='../../../public/img/banner2.png')
       span 通知公告
     .list-board
       .list-item(v-for='item in data')
@@ -61,6 +61,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.banner
-  background url('../../../public/img/banner2.png') bottom center
 </style>

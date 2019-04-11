@@ -60,7 +60,8 @@ export default {
   display flex
   flex-flow column nowrap
   background #ffffff
-  overflow auto
+  overflow-y auto
+  overflow-x hidden
 .main
   flex 1
 .footer
