@@ -70,6 +70,9 @@ export default {
       }
     }
   },
+  mounted () {
+    this.$store.dispatch({ type: 'fetchBasisInfo' })
+  },
   computed: {
     info () {
       let data = [

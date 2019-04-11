@@ -2,46 +2,46 @@ import Axios from 'axios'
 import querystring from 'querystring'
 import config from '~/config'
 class Rest {
-  constructor ({ baseURL = config.server.baseUrl, refreshTokenUrl = `${config.server.baseUrl}${config.server.refreshToken}`, headers = {} }) {
+  constructor () {
     this.axios = Axios.create({
-      baseURL,
+      // baseURL,
       timeout: 20000,
       // session支持
-      withCredentials: true,
-      headers
+      withCredentials: true
+      // headers
     })
-    this.refreshTokenUrl = refreshTokenUrl
-    this.axios.interceptors.request.use(config => {
-      if (Rest.validateToken()) {
-        // 在发送请求之前添加头信息
-        return Rest.addHeaders(config)
-      } else {
-        let promise = Rest.addRequestQueue(config)
-        if (!Rest.isRefreshing) Rest.refreshToken(this.refreshTokenUrl)
-        return promise
-      }
-    })
-    this.axios.interceptors.response.use(r => {
-      return r
-    }, err => {
-      if (Rest.redirect) {
-        return
-      }
-      // 对401响应错误做登录跳转
-      if (err.response) {
-        switch (err.response.status) {
-          case 401:
-            Rest.redirect = true
-            let params = querystring.stringify({ redirect_back: `${window.location.href}`, source: 'gateway' })
-            window.location.href = `${config.server.baseUrl}${config.server.login}?${params}`
-            break
-          default:
-            return Promise.reject(err)
-        }
-      } else {
-        return Promise.reject(err)
-      }
-    })
+    // this.refreshTokenUrl = refreshTokenUrl
+    // this.axios.interceptors.request.use(config => {
+    //   if (Rest.validateToken()) {
+    //     // 在发送请求之前添加头信息
+    //     return Rest.addHeaders(config)
+    //   } else {
+    //     let promise = Rest.addRequestQueue(config)
+    //     if (!Rest.isRefreshing) Rest.refreshToken(this.refreshTokenUrl)
+    //     return promise
+    //   }
+    // })
+    // this.axios.interceptors.response.use(r => {
+    //   return r
+    // }, err => {
+    //   if (Rest.redirect) {
+    //     return
+    //   }
+    //   // 对401响应错误做登录跳转
+    //   if (err.response) {
+    //     switch (err.response.status) {
+    //       case 401:
+    //         Rest.redirect = true
+    //         let params = querystring.stringify({ redirect_back: `${window.location.href}`, source: 'gateway' })
+    //         window.location.href = `${config.server.baseUrl}${config.server.login}?${params}`
+    //         break
+    //       default:
+    //         return Promise.reject(err)
+    //     }
+    //   } else {
+    //     return Promise.reject(err)
+    //   }
+    // })
     return this
   }
   fetch ({ resource = '', params = {} }) {
