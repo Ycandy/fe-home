@@ -71,7 +71,7 @@ export default {
     }
   },
   mounted () {
-    this.$store.dispatch({ type: 'fetchBasisInfo' })
+    // this.$store.dispatch({ type: 'fetchBasisInfo' })
   },
   computed: {
     info () {
