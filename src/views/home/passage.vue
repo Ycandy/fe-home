@@ -61,4 +61,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.banner
+  background url('../../../public/img/banner2.png') bottom center
 </style>

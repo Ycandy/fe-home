@@ -1,7 +1,2 @@
-# 北师大首页
+# labmai-fe-home-entry
 
-## 相关操作命令：
-### 开发模式
-- npm install
-- npm run dev
-- 浏览器打开 http://localhost:8001/bnu

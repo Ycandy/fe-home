@@ -1,7 +1,9 @@
 <template lang="pug">
 .index
-  router-view
-  Footer
+  .main
+    router-view
+  .footer
+    Footer
 </template>
 
 <script>
@@ -54,7 +56,13 @@ export default {
 .index
   position relative
   width 100%
+  height 100%
   display flex
   flex-flow column nowrap
   background #ffffff
+  overflow auto
+.main
+  flex 1
+.footer
+  none
 </style>

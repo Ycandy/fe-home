@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     .banner
-      img()
+      img(src='../../../public/img/banner2.png')
       span 文件下载
     .list-board
       .list-item(v-for='item in data')
