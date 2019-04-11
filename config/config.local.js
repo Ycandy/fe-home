@@ -4,5 +4,8 @@ module.exports = {
   route: {
     prefix: '/bnu',
     port: 8001,
+  },
+  server: {
+    baseUrl: ''
   }
 }
