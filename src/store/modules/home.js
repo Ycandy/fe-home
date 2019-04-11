@@ -4,6 +4,7 @@ import Home from 'src/model/home'
 let homeApi = new Home()
 
 const state = {
+  info: {}
 }
 
 const actions = {
@@ -40,11 +41,11 @@ const actions = {
 }
 
 const mutations = {
-  setApplications (state, { applications }) {
-    if (applications) {
-      state.applications = {}
-      applications.map(item => {
-        Vue.set(state.applications, item.id, item)
+  setInfo (state, { info }) {
+    if (info) {
+      state.info = {}
+      info.map(item => {
+        Vue.set(state.info, item.id, item)
       })
     }
   }

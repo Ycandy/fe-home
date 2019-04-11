@@ -1,7 +1,8 @@
 <template lang="pug">
-  .container
+  .container.home
     Top(:viewStyle='viewStyle')
     .banner
+      img.background(src="../../../public/img/banner.png")
       .notice-container
         .notice
           .same-style.same-border
@@ -108,104 +109,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.container
-  width: 100%;
-  min-width: 1200px;
-  height: 100%;
-  display flex
-  flex-flow column nowrap
-  align-items center
-.banner
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: 500px;
-  background: url('../../../public/img/banner.png') no-repeat
-.notice-container
-  width: 1200px;
-  height: 100%;
-  min-width: 1100px;
-  display: flex;
-  flex-direction: row-reverse;
-.notice
-  padding: 14px 26px;
-  width: 400px;
-  height: 100%;
-  background: #000000;
-  opacity: 0.6;
-  box-sizing: border-box;
-.same-style
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-.title
-  height: 54px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-.same-border
-  border-bottom:  1px solid rgba(105, 105, 105, 0.1)
-.title span
-  margin-left: 16px;
-  color: #ffffff;
-  font-size: 16px;
-.more
-  color: #ffffff;
-  opacity: 0.5;
-  font-size: 12px;
-  cursor: pointer;
-.content
-  font-size: 12px;
-  color: #ffffff;
-  opacity: 0.7;
-  height: 12px;
-  line-height: 12px;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-  cursor: pointer;
-.content:hover
-  color: #e27471;
-  opacity: 1;
-.content:first-child
-  margin-top: 28px;
-.content:last-child
-  margin-bottom: 24px;
-.thumbnail
-  width: 1200px;
-  min-width: 1100px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 26px 0 90px 0;
-.caption
-  width: 224px;
-  height: 170px;
-  min-width: 30px;
-  border: 1px solid #f0b9b8;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #e27471;
-  cursor: pointer;
-  background: #fefbfb;
-.caption img
-  width: 75px;
-  height: 49px;
-  margin-bottom: 30px
-.active
-  display: none
-.caption:hover
-  background: #e27471;
-  color: #ffffff;
-.caption:hover .active
-  display: block;
-.caption:hover .normal
-  display: none
 </style>
 
