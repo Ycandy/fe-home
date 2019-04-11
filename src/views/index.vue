@@ -8,7 +8,25 @@
 import config from '~/config'
 import Footer from './home/Footer'
 
+const prepare = async ({ store, params }) => {
+  store.dispatch({
+    type: 'fetchBasisInfo'
+  })
+}
+
 export default {
+  async beforeRouteEnter (to, from, next) {
+    let params = to.params
+    let store = to.params.store
+    await prepare({ params, store })
+    next()
+  },
+  async beforeRouteUpdate (to, from, next) {
+    let params = to.params
+    let store = to.params.store
+    await prepare({ params, store })
+    next()
+  },
   components: {
     Footer
   },
