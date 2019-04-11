@@ -30,30 +30,35 @@
         .active
           img(src="public/img/云商城s.png")
         span 云商城
+      .spaceFix
       .caption
         .normal
           img(src="public/img/安全考试.png")
         .active
           img(src="public/img/安全考试s.png")
         span 安全考试
+      .spaceFix
       .caption
         .normal
           img(src="public/img/气体检测.png")
         .active
           img(src="public/img/气体检测s.png")
         span 气体检测
+      .spaceFix
       .caption
         .normal
           img(src="public/img/管理方.png")
         .active
           img(src="public/img/管理方s.png")
         span 管理方
+      .spaceFix
       .caption
         .normal
           img(src="public/img/安全巡查.png")
         .active
           img(src="public/img/安全巡查s.png")
         span 安全巡查
+      .spaceFix
 </template>
 
 <script>
