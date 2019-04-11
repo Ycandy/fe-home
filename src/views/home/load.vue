@@ -20,8 +20,22 @@
 
 <script>
 import { Pagination } from 'element-ui'
+const prepare = async ({ store, params }) => {
+  store.dispatch({
+    type: 'fetchList',
+    target: 'files',
+    page: 10,
+    perpage: 1
+  })
+}
 
 export default {
+  async beforeRouteEnter (to, from, next) {
+    let params = to.params
+    let store = to.params.store
+    await prepare({ params, store })
+    next()
+  },
   components: {
     [Pagination.name]: Pagination
   },
