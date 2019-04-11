@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import Top from './Top.vue'
+import Top from 'src/components/Top.vue'
 
 export default {
   components: {

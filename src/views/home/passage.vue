@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     .banner(style='height: 130px')
-      img.background(src='../../../public/img/banner2.png')
+      img.background(src='public/img/banner2.png')
       span 通知公告
     .list-board
       .list-item(v-for='item in data')

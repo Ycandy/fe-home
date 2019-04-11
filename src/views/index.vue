@@ -8,7 +8,7 @@
 
 <script>
 import config from '~/config'
-import Footer from './home/Footer'
+import Footer from 'src/components/Footer'
 
 const prepare = async ({ store, params }) => {
   store.dispatch({

@@ -2,7 +2,7 @@
 .bottom
   .bottom-board
     .left
-      img(src="../../../public/img/bottom_logo.png" alt="")
+      img(src="public/img/bottom_logo.png" alt="")
       .line
       .message
         div 平台名称：北京师范大学实验室安全管理平台
@@ -12,7 +12,7 @@
       .message
         div 关注 LabMai 公众号
         div 提供更多便捷服务
-      img(src="../../../public/img/bottom_logo.png" alt="")
+      img(src="public/img/bottom_logo.png" alt="")
 </template>
 
 <script>
