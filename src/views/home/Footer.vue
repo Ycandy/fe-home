@@ -32,36 +32,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bottom
-  width: 100%;
-  height: 65px;
-  background-color: #f7f8fc;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  flex: none;
-.bottom-board
-  min-width: 1100px;
-  width: 1200px;
-  min-width: 1100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between
-.bottom-board .left, .bottom-board .right
-  display: flex;
-  align-items: center
-.bottom .line
-  margin: 0 26px;
-  width: 1px;
-  height: 26px;
-  background-color: #9396a2
-.bottom .message
-  display: flex;
-  font-size: 12px;
-  color: #9396a2;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin-right: 20px
 </style>
 
