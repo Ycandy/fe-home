@@ -1,16 +1,14 @@
 import Rest from './driver/rest'
 const resource = 'home'
 
-export default class Area {
+export default class Origin {
   constructor () {
     this.rest = new Rest({})
   }
-  fetch (params) {
-    return this.rest
-      .get({
-        resource: `rest/${resource}/info`,
-        params
-      })
-      .then(r => r)
+  get (params) {
+    return this.rest.get({
+      resource,
+      params
+    }).then(r => r)
   }
 }

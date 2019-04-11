@@ -1,19 +1,21 @@
-import Api from '../api'
 import Vue from 'vue'
+import Home from 'src/model/home'
 
-let api = new Api('home')
+let homeApi = new Home()
 
 const state = {
 }
 
 const actions = {
-  fetchBasisInfo ({ commit, state }) {
+  async fetchBasisInfo ({ commit, state }) {
     state.appLoad = true
-    return api.invoke('fetch')
-      .then(r => {
-        console.log('r', r)
-        return r
-      })
+    let r = await homeApi.get()
+    console.log(r)
+    // return api.invoke('fetch')
+    //   .then(r => {
+    //     console.log('r', r)
+    //     return r
+    //   })
   }
 }
 
