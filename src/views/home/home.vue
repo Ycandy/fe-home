@@ -1,6 +1,6 @@
 <template lang="pug">
   .container.home
-    Top.hom(:viewStyle='viewStyle')
+    Top.home(:title='btnTitle')
     .banner(style='height: 500px')
       img.background(src="../../../public/img/banner.png")
       .notice-container
@@ -65,10 +65,7 @@ export default {
   },
   data () {
     return {
-      viewStyle: {
-        backgroundColor: '#e27471',
-        color: '#ffffff'
-      }
+      btnTitle: '管理方入口'
     }
   },
   mounted () {

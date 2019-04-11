@@ -1,6 +1,6 @@
 <template lang="pug">
   .container.load
-    Top(:viewStyle='viewStyle')
+    Top(:title='btnTitle')
     .banner(style='height: 130px')
       img.background(src='/public/img/banner2.png')
       span 文件下载
@@ -45,10 +45,7 @@ export default {
   },
   data () {
     return {
-      viewStyle: {
-        backgroundColor: '#e27471',
-        color: '#ffffff'
-      },
+      btnTitle: '管理方入口',
       data: [{ title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },

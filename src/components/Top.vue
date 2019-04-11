@@ -1,16 +1,15 @@
 <template lang="pug">
 .top
   img.image(src="public/img/logo.png")
-  .entrance 管理方入口
+  .entrance {{ title }}
 </template>
 
 <script>
 
 export default {
-  props: ['viewStyle'],
+  props: ['title'],
   data () {
     return {
-      style: this.viewStyle
     }
   },
   mounted () {
@@ -20,9 +19,6 @@ export default {
   methods: {
   },
   watch: {
-    'viewStyle' (to, from) {
-      this.style = to
-    }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template lang="pug">
   .container.passage
-    Top(:viewStyle='viewStyle')
+    Top(:title='btnTitle')
     .banner(style='height: 130px')
       img.background(src='public/img/banner2.png')
       span 通知公告
@@ -46,10 +46,7 @@ export default {
   },
   data () {
     return {
-      viewStyle: {
-        backgroundColor: '#e27471',
-        color: '#ffffff'
-      },
+      btnTitle: '管理方入口',
       data: [{ title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
