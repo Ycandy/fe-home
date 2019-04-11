@@ -1,7 +1,7 @@
 <template lang="pug">
 .top
   img.image(src="public/img/logo.png")
-  .entrance(:style="{'color': style.color, 'background-color': style.backgroundColor}") 管理方入口
+  .entrance 管理方入口
 </template>
 
 <script>

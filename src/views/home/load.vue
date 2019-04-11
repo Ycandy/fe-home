@@ -1,5 +1,6 @@
 <template lang="pug">
-  .container
+  .container.load
+    Top(:viewStyle='viewStyle')
     .banner(style='height: 130px')
       img.background(src='/public/img/banner2.png')
       span 文件下载
@@ -20,6 +21,8 @@
 
 <script>
 import { Pagination } from 'element-ui'
+import Top from 'src/components/Top.vue'
+
 const prepare = async ({ store, params }) => {
   store.dispatch({
     type: 'fetchList',
@@ -37,10 +40,15 @@ export default {
     next()
   },
   components: {
-    [Pagination.name]: Pagination
+    [Pagination.name]: Pagination,
+    Top
   },
   data () {
     return {
+      viewStyle: {
+        backgroundColor: '#e27471',
+        color: '#ffffff'
+      },
       data: [{ title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },
         { title: '北师大', time: '2019-03-09', detail: '123ashdpfhapuehpauh' },

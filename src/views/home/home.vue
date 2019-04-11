@@ -1,6 +1,6 @@
 <template lang="pug">
-  .container
-    Top(:viewStyle='viewStyle')
+  .container.home
+    Top.hom(:viewStyle='viewStyle')
     .banner(style='height: 500px')
       img.background(src="../../../public/img/banner.png")
       .notice-container
