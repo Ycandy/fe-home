@@ -1,7 +1,7 @@
 <template lang="pug">
   .container.passage
     Top(:title='btnTitle')
-    .banner(style='height: 130px')
+    .banner
       img.background(src='public/img/banner2.png')
       span 通知公告
     .list-board

@@ -1,0 +1,17 @@
+.banner
+  width 100%
+  flex none
+  display flex
+  flex-flow row nowrap
+  justify-content center
+  align-items center
+  .background
+    z-index 1
+    height inherit
+    position absolute
+.home
+  .banner
+    height $higherBanner
+.load, .passage
+  .banner
+    height $lowerBanner

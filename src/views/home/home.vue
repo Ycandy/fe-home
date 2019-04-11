@@ -1,7 +1,7 @@
 <template lang="pug">
   .container.home
     Top.home(:title='btnTitle')
-    .banner(style='height: 500px')
+    .banner
       img.background(src="../../../public/img/banner.png")
       .notice-container
         .notice

@@ -1,7 +1,7 @@
 <template lang="pug">
   .container.load
     Top(:title='btnTitle')
-    .banner(style='height: 130px')
+    .banner
       img.background(src='/public/img/banner2.png')
       span 文件下载
     .list-board
